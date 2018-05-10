@@ -11,11 +11,11 @@ ATOM BR2  Br    X   -0.08
 ATOM  H3  Hapo  X   0.12
 ATOM  H4  Hapo  X   0.12
 BOND_TYPE  C1   C2  1   
+BOND_TYPE  C1  BR1  1   
 BOND_TYPE  C1   H1  1   
 BOND_TYPE  C1   H2  1   
 BOND_TYPE  C2   H3  1   
 BOND_TYPE  C2   H4  1   
-BOND_TYPE  C1  BR1  1   
 BOND_TYPE  C2  BR2  1   
 CHI 1 BR2   C2   C1  BR1 
 NBR_ATOM  C2 

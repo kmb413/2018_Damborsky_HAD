@@ -1,0 +1,11 @@
+-run:preserve_header
+-ex1
+-ex2
+-extrachi_cutoff 1
+-linmem_ig 10
+#-mute core.io.database
+-no_packstat_calculation
+-no_optH true
+-use_input_sc
+-beta
+-score:weights beta_nov16_cst

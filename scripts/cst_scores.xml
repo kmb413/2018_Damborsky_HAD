@@ -1,0 +1,30 @@
+<ROSETTASCRIPTS>
+    <SCOREFXNS>
+        <ScoreFunction name="beta" weights="beta_nov16_cst.wts" />
+    </SCOREFXNS>
+    <RESIDUE_SELECTORS>
+    </RESIDUE_SELECTORS>
+    <TASKOPERATIONS>
+    </TASKOPERATIONS>
+    
+    <FILTERS>
+        Calculate cstE
+        <EnzScore name="cstE" scorefxn="beta" whole_pose="1" score_type="cstE" energy_cutoff="9999.0"/>
+
+    </FILTERS>
+
+    <MOVERS>
+        
+        Add match csts
+        <AddOrRemoveMatchCsts name="match_cst" cst_instruction="add_new"/>
+
+    </MOVERS>
+
+    <APPLY_TO_POSE>
+    </APPLY_TO_POSE>
+
+    <PROTOCOLS>
+        <Add mover="match_cst" />
+        <Add filter="cstE" />
+    </PROTOCOLS>
+</ROSETTASCRIPTS>

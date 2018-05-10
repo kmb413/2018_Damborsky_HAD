@@ -1,0 +1,104 @@
+## CST1
+## Nucleophile: D105 ##
+## Covalently-bound O can be either one, hence OOC
+CST::BEGIN
+ TEMPLATE:: ATOM_MAP: 1 atom_name: C2 C1 BR1
+ TEMPLATE:: ATOM_MAP: 1 residue3: LN1 
+
+ TEMPLATE:: ATOM_MAP: 2 atom_type: OOC CG CB
+ TEMPLATE:: ATOM_MAP: 2 residue3: ASP 
+
+ CONSTRAINT:: distanceAB: 1.69 0.2 100 1 0
+ CONSTRAINT:: angle_A: 105.340 10.0 10.0 360.0 1
+ CONSTRAINT:: angle_B: 114.778 10.0 10.0 360.0 1
+ CONSTRAINT:: torsion_A: -74.97 20.0 10.0 360.0 1
+ CONSTRAINT:: torsion_AB: -120.04 20.0 10.0 360.0 1
+ CONSTRAINT:: torsion_B: -166.60 20.0 10.0 360.0 1
+
+ ALGORITHM_INFO:: match_positions
+ ALGORITHM_INFO::END
+CST::END
+
+## CST2
+## Halide stabilizing residue 1: N35
+## This residue will be replaced by DhlA cap resi Trp175
+CST::BEGIN
+ TEMPLATE:: ATOM_MAP: 1 atom_name: BR2 C2 C1
+ TEMPLATE:: ATOM_MAP: 1 residue3: LN1 
+
+ TEMPLATE:: ATOM_MAP: 2 atom_name: ND2 CG CB
+ TEMPLATE:: ATOM_MAP: 2 residue3: ASN 
+
+ CONSTRAINT:: distanceAB: 3.09 0.2 100 0 0
+ CONSTRAINT:: angle_A: 123.487 10.0 10.0 360.0 1
+ CONSTRAINT:: angle_B: 106.999 10.0 10.0 360.0 1
+ CONSTRAINT:: torsion_A: 73.30 20.0 10.0 360.0 1
+ CONSTRAINT:: torsion_AB: 58.45 20.0 10.0 360.0 1
+ CONSTRAINT:: torsion_B: -28.14 20.0 10.0 360.0 1
+
+ ALGORITHM_INFO:: match_positions
+ ALGORITHM_INFO::END
+CST::END
+
+## CST3
+## Halide stabilizing residue 2: W106
+CST::BEGIN
+ TEMPLATE:: ATOM_MAP: 1 atom_name: BR2 C2 C1
+ TEMPLATE:: ATOM_MAP: 1 residue3: LN1 
+
+ TEMPLATE:: ATOM_MAP: 2 atom_name: NE1 CD1 CG
+ TEMPLATE:: ATOM_MAP: 2 residue3: TRP 
+
+ CONSTRAINT:: distanceAB: 2.99 0.2 100 0 0
+ CONSTRAINT:: angle_A: 74.295 10.0 10.0 360.0 1
+ CONSTRAINT:: angle_B: 98.559 10.0 10.0 360.0 1
+ CONSTRAINT:: torsion_A: -175.27 20.0 10.0 360.0 1
+ CONSTRAINT:: torsion_AB: -70.97 20.0 10.0 360.0 1
+ CONSTRAINT:: torsion_B: 176.85 20.0 10.0 360.0 1
+
+ ALGORITHM_INFO:: match_positions
+ ALGORITHM_INFO::END
+CST::END
+
+## CST4
+## Basic Histidine: H269
+## 
+CST::BEGIN
+ TEMPLATE:: ATOM_MAP: 1 atom_name: NE2 CD2 CG
+ TEMPLATE:: ATOM_MAP: 1 residue3: HIP 
+
+ TEMPLATE:: ATOM_MAP: 2 atom_name: OD1 CG CB
+ TEMPLATE:: ATOM_MAP: 2 residue3: ASP 
+
+ CONSTRAINT:: distanceAB: 2.83 0.2 100 0 0
+ CONSTRAINT:: angle_A: 154.258 10.0 10.0 360.0 1
+ CONSTRAINT:: angle_B: 110.778 10.0 10.0 360.0 1
+ CONSTRAINT:: torsion_A: 167.09 20.0 10.0 360.0 1
+ CONSTRAINT:: torsion_AB: 83.65 20.0 10.0 360.0 1
+ CONSTRAINT:: torsion_B: 58.83 20.0 10.0 360.0 1
+
+ ALGORITHM_INFO:: match
+    SECONDARY_MATCH: UPSTREAM_CST 1
+ ALGORITHM_INFO::END
+CST::END
+
+## CST5
+## Histidine stabilizing residue: E129
+CST::BEGIN
+ TEMPLATE:: ATOM_MAP: 1 atom_name: OE1 CD CG
+ TEMPLATE:: ATOM_MAP: 1 residue3: GLU 
+
+ TEMPLATE:: ATOM_MAP: 2 atom_name: ND1 CG CB
+ TEMPLATE:: ATOM_MAP: 2 residue3: HIP 
+
+ CONSTRAINT:: distanceAB: 2.67 0.2 100 0 0
+ CONSTRAINT:: angle_A: 141.058 10.0 10.0 360.0 1
+ CONSTRAINT:: angle_B: 122.967 10.0 10.0 360.0 1
+ CONSTRAINT:: torsion_A: 10.26 20.0 10.0 360.0 1
+ CONSTRAINT:: torsion_AB: -103.41 20.0 10.0 360.0 1
+ CONSTRAINT:: torsion_B: 7.69 20.0 10.0 360.0 1
+
+ ALGORITHM_INFO:: match
+    SECONDARY_MATCH: UPSTREAM_CST 4
+ ALGORITHM_INFO::END
+CST::END
