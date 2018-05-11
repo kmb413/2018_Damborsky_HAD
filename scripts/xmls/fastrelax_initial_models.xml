@@ -1,0 +1,47 @@
+<ROSETTASCRIPTS>
+    <SCOREFXNS>
+        <ScoreFunction name="beta" weights="beta_nov16_cst.wts" />
+    </SCOREFXNS>
+
+    <RESIDUE_SELECTORS>
+        <Chain name="protein" chains="A"/>
+    </RESIDUE_SELECTORS>
+
+    <TASKOPERATIONS>
+    </TASKOPERATIONS>
+    
+    <FILTERS>
+        <EnzScore name="cstE" scorefxn="beta" whole_pose="1" score_type="cstE" energy_cutoff="9999.0"/>
+        <Rmsd name="ca_rmsd" chains="A" threshold="100000000" superimpose="1" />
+        <PoseInfo name="pose_info" />
+    </FILTERS>
+
+    <MOVERS>
+        <AddOrRemoveMatchCsts name="add_match_csts" cst_instruction="add_new"/>
+        
+        <FastRelax name="fastrelax" scorefxn="beta" repeats="8" >
+            <MoveMap name="mm" >
+                <Chain number="1" chi="1" bb="1" />
+                <Chain number="2" chi="0" bb="0" />
+                <Jump number="1" setting="0"/>
+            </MoveMap>
+        </FastRelax>
+
+        <AddConstraints name="add_coord_csts" >
+            <CoordinateConstraintGenerator name="bb_coord_csts" residue_selector="protein" sd="0.1" bounded="false" sidechain="false" />
+        </AddConstraints>
+    
+    </MOVERS>
+
+    <APPLY_TO_POSE>
+    </APPLY_TO_POSE>
+
+    <PROTOCOLS>
+        <Add filter="pose_info" />
+        <Add mover="add_coord_csts" />
+        <Add mover="add_match_csts" />
+        <Add mover="fastrelax" />
+        <Add filter="cstE" />
+        <Add filter="ca_rmsd" />
+    </PROTOCOLS>
+</ROSETTASCRIPTS>
