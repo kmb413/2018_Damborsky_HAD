@@ -9,3 +9,4 @@
 -use_input_sc
 -beta
 -score:weights beta_nov16_cst
+-write_pdb_link_records false

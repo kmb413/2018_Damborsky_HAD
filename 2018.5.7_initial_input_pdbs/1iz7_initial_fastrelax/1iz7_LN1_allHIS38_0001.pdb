@@ -4,7 +4,7 @@ REMARK 666 MATCH TEMPLATE X LN1    0 MATCH MOTIF A TRP  107  3  1
 REMARK 666 MATCH TEMPLATE A HIP  270 MATCH MOTIF A ASP  106  4  1               
 REMARK 666 MATCH TEMPLATE A GLU  130 MATCH MOTIF A HIP  270  5  1               
 HETNAM     LN1 X   1  LN1                                                       
-LINK         OD1 ASP A 106                 C2  LN1 X   1                  1.69  
+##LINK         OD1 ASP A 106                 C2  LN1 X   1                  1.69  
 ATOM      1  N   LEU A   1      26.715  39.719  -8.875  1.00  0.00           N  
 ATOM      2  CA  LEU A   1      27.050  40.773  -9.851  1.00  0.00           C  
 ATOM      3  C   LEU A   1      27.756  41.960  -9.198  1.00  0.00           C  
