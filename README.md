@@ -18,3 +18,10 @@ Testing 1cv2_bot.enzdes_constraints
     - 1cv2_LN1_allHIS_messedupligand.pdb -> cstE = 153.645
     - 1iz7_LN1_allHIS.pdb -> cstE = 0
     - 1mj5_LN1_allHIS.pdb -> cstE = 0.00151203
+
+FastRelaxed theozymes in nested-domain protein context 50 times. Using lowest Energy structure.
+
+GRIDLIGS:
+make sure no TER or ENDs
+make sure ATOM -> HETATM and all residue numbers are the same number (all resi 1)
+/home/kmb413/Rosetta/main/source/bin/gen_lig_grids.default.linuxgccrelease -in:file:s 1cv2/1cv2_bot.pdb 1kds.pdb

@@ -1,0 +1,18 @@
+-loodo
+    -num_frags 10
+    -gridligpath /scratch/kmb413/2018_Damborsky_HAD/input/1cv2/1cv2_bot.pdb_0.gridlig
+    -fragAnative /scratch/kmb413/2018_Damborsky_HAD/input/1cv2/1cv2_linkerA.pdb
+    -fragBnative /scratch/kmb413/2018_Damborsky_HAD/input/1cv2/1cv2_linkerB.pdb
+    -ins_begin 130
+    -cap /scratch/kmb413/2018_Damborsky_HAD/input/2dhd/2dhd_cap.pdb
+    -bot /scratch/kmb413/2018_Damborsky_HAD/input/1cv2/1cv2_bot.pdb
+    -fragAlength 8
+    -fragBlength 7
+    -com_in_grid true
+    -loud true
+    -distance_tolerance 20
+    -euler_tolerance 15
+    #-use_fraglib ## BUT USES THIS FOR BOTH FRAGA AND FRAGB
+    -dump_all_As true
+    #-known ## number of internal residues that should have ss and aa similar
+    -dump_all_Bs true
