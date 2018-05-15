@@ -6,8 +6,8 @@
     -ins_begin 130
     -cap /scratch/kmb413/2018_Damborsky_HAD/input/2dhd/2dhd_cap.pdb
     -bot /scratch/kmb413/2018_Damborsky_HAD/input/1cv2/1cv2_bot.pdb
-    -fragAlength 8
-    -fragBlength 7
+    -fragAlength 4
+    -fragBlength 3
     -com_in_grid true
     -loud true
     -distance_tolerance 20
